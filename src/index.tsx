@@ -1,12 +1,16 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import ReactDOM from "react-dom/client";
-import timelineItems from "./timelineItems.js";
+
+import { Container, Timeline } from "./components";
+
+import { ThemeProvider } from "./utils/themes/provider.js";
 
 const App = (): ReactNode => (
-  <div>
-    <h2>Good luck with your assignment! {"\u2728"}</h2>
-    <h3>{timelineItems.length} timeline items to render</h3>
-  </div>
+  <ThemeProvider>
+    <Container>
+      <Timeline />
+    </Container>
+  </ThemeProvider>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
