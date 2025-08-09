@@ -47,7 +47,7 @@ My error in this code was dedicating too much time to the project's base. I coul
 4. **Run the development server:**
 
    ```bash
-   npm run dev
+   npm start
    # or
-   yarn dev
+   yarn start
    ```
