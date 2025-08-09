@@ -5,7 +5,7 @@ import { TimelineItem, TimelineItemsArray } from "../timelineItems";
  * @returns an array of arrays containing items.
  */
 
-function assignLanes(items: TimelineItemsArray) {
+export function assignLanes(items: TimelineItemsArray) {
   const sortedItems = items.sort(
     (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()
   ) as TimelineItemsArray;

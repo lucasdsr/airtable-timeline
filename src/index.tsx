@@ -1,17 +1,17 @@
-import { ReactNode } from "react";
+import { StrictMode } from "react";
+
 import ReactDOM from "react-dom/client";
 
-import { Container, Timeline } from "./components";
+import { App } from "./App";
 
-import { ThemeProvider } from "./utils/themes/provider.js";
+const rootElement = document.getElementById("root");
 
-const App = (): ReactNode => (
-  <ThemeProvider>
-    <Container>
-      <Timeline />
-    </Container>
-  </ThemeProvider>
-);
-
-const root = ReactDOM.createRoot(document.getElementById("root")!);
-root.render(<App />);
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+} else {
+  console.error("Could not find element with id 'root'.");
+}
